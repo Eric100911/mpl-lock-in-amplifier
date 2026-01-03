@@ -46,6 +46,14 @@ make all
 
 这一编译的主要过程即为运行`make`。值得注意的是，为了保证Times New Roman字体的正确显示，编译环境中安装了`ttf-mscorefonts-installer`，并且借助`apt-utils`强制同意`Microsoft EULA`。
 
+# 实用工具
+
+## 提取所涉及的图片
+
+```bash
+grep includegraphics Prep/prep-slides.tex  | sed -r -e "s/^\S*[^%].*\{(.*png)\}.*$/\1/g"
+```
+
 # 原实验报告内容概览：GMR实验报告
 
 ## 实验内容
